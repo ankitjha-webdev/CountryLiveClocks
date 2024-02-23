@@ -23,12 +23,24 @@ Here's a quick example to get you started:
 
 ```javascript
 const { getCountryLiveClock } = require('country-live-clocks');
-// Replace 'US' with the country code you're interested in
-getCountryLiveClock('US').then(timezones => {
-console.log(timezones);
-}).catch(error => {
-console.error('Error fetching timezones:', error);
-});
+
+// Replace 'US' with any country code you want to test
+const countryCode = 'US';
+
+const liveClock = getCountryLiveClock(countryCode);
+
+console.log(liveClock);
+```
+Output
+
+```bash
+foo@bar:~$ [
+  { timezone: 'America/Adak', time: '7:23 AM' },
+  { timezone: 'America/Anchorage', time: '8:23 AM' },
+  { timezone: 'America/Boise', time: '10:23 AM' },
+  { timezone: 'America/Chicago', time: '11:23 AM' },
+  { timezone: 'America/Denver', time: '10:23 AM' }
+]
 ```
 
 ## API

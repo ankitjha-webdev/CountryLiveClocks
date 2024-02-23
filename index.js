@@ -320,19 +320,19 @@ function getOffsetStr(offset) {
  * @param {string} countryCode - The ISO 3166-1 alpha-2 country code.
  * @returns {Array.<{timezone: string, time: string}>} An array of objects, each containing a timezone and its current time.
  */
-async function getCountryLiveClock(countryCode) {
-    return new Promise((resolve, reject) => {
-        if (!countryCode) reject(new Error("Country Code is required"));
-        
-        const timezonesForCountry = getTimezonesForCountry(countryCode.toUpperCase());
-        if (!timezonesForCountry) reject(new Error("Invalid Country Code"));
-        
-        const result = timezonesForCountry.slice(0, 5).map(({ name: timezone }) => ({
-            timezone,
-            time: new Date().toLocaleTimeString('en-US', { timeZone: timezone, hour12: true, timeStyle: 'short' })
-        }));
-        resolve(result);
-    });
+function getCountryLiveClock(countryCode) {
+    if (!countryCode)
+        throw new Error("Country Code is required");
+
+    const timezonesForCountry = getTimezonesForCountry(countryCode.toUpperCase());
+
+    if (!timezonesForCountry)
+        throw new Error("Invalid Country Code");
+
+    return timezonesForCountry.slice(0, 5).map(({ name: timezone }) => ({
+        timezone,
+        time: new Date().toLocaleTimeString('en-US', { timeZone: timezone, hour12: true, timeStyle: 'short' })
+    }));
 }
 
 module.exports = getCountryLiveClock;
