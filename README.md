@@ -12,8 +12,10 @@ Country Live Clock is a versatile npm package designed to provide real-time time
 
 To install Country Live Clocks, run the following command in your project directory:
 
-bash
-`npm install country-live-clocks`
+```bash
+foo@bar:~$ npm install country-live-clocks
+0 vulnerabilities   
+```
 
 ## Usage
 
@@ -22,9 +24,9 @@ Here's a quick example to get you started:
 ```javascript
 const { getCountryLiveClock } = require('country-live-clocks');
 // Replace 'US' with the country code you're interested in
-getCountryLiveClock('US').then(timezones =>> {
+getCountryLiveClock('US').then(timezones => {
 console.log(timezones);
-}).catch(error =>> {
+}).catch(error => {
 console.error('Error fetching timezones:', error);
 });
 ```
