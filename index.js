@@ -325,7 +325,7 @@ async function getCountryLiveClock(countryCode) {
         if (!countryCode) reject(new Error("Country Code is required"));
         
         const timezonesForCountry = getTimezonesForCountry(countryCode.toUpperCase());
-        if (!timezonesForCountry?.length) reject(new Error("Invalid Country Code"));
+        if (!timezonesForCountry) reject(new Error("Invalid Country Code"));
         
         const result = timezonesForCountry.slice(0, 5).map(({ name: timezone }) => ({
             timezone,
