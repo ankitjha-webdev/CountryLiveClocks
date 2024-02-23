@@ -1,6 +1,6 @@
 {
     "name": "country-live-clocks",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "Country Live Clock is a versatile npm package designed to provide real-time timezone information for any country. By simply passing a country code, users can retrieve an array of objects detailing the current time across all the time zones within that country. Whether you're building applications that require accurate global time display, scheduling software that spans multiple time zones, or just need a quick way to check the time in different parts of a country, Country Live Clock offers a straightforward and efficient solution.",
     "main": "index.js",
     "scripts": {
