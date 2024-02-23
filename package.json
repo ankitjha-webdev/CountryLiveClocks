@@ -1,0 +1,44 @@
+{
+    "name": "country-live-clocks",
+    "version": "1.0.1",
+    "description": "Country Live Clock is a versatile npm package designed to provide real-time timezone information for any country. By simply passing a country code, users can retrieve an array of objects detailing the current time across all the time zones within that country. Whether you're building applications that require accurate global time display, scheduling software that spans multiple time zones, or just need a quick way to check the time in different parts of a country, Country Live Clock offers a straightforward and efficient solution.",
+    "main": "index.js",
+    "scripts": {
+      "test": "node test.js"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/ankitjha-webdev/CountryLiveClocks.git"
+    },
+    "keywords": [
+      "time zones",
+      "country time",
+      "world clock",
+      "timezone converter",
+      "timezone",
+      "local time",
+      "global clock",
+      "country code",
+      "time API",
+      "live clock",
+      "time utility",
+      "international time",
+      "timezone lookup",
+      "country timezone",
+      "clock",
+      "React",
+      "Vue",
+      "Angular",
+      "Node.js",
+      "JavaScript",
+      "frontend",
+      "backend",
+      "web development"
+    ],
+    "author": "Ankit Kumar <ankitjha-webdev@example.com>",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/ankitjha-webdev/CountryLiveClocks/issues"
+    },
+    "homepage": "https://github.com/ankitjha-webdev/CountryLiveClocks#readme"
+  }
